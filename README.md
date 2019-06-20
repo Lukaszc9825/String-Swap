@@ -10,7 +10,7 @@ EXAMPLE
 
 file1.txt:
 one two three four five
-# comment
+## comment
 six
 seven
 eight nine
