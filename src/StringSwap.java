@@ -21,7 +21,7 @@ public class StringSwap {
         for (int i=0; i<array.length;i++)
         {
             swaped[i]=array[array.length-1-i];
-            System.out.println(swaped[i]);
+            //System.out.println(swaped[i]);
 
         }
         return swaped;
