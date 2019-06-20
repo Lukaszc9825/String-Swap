@@ -47,7 +47,7 @@ public class File_reader {
     public void write(String file_name, String[] array)
      {
          try {
-             write.flush();
+             //write.flush();
              this.file_save = new File(file_name + ".txt");
              this.write = new FileWriter(file_save);
              for (String s:array)
@@ -61,6 +61,7 @@ public class File_reader {
          }finally {
              try{
                  write.close();
+                 write.flush();
              }catch (Exception e)
              {
 
