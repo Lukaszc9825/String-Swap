@@ -10,12 +10,13 @@ EXAMPLE
 
 file1.txt:
 one two three four five
-## comment
+"#" comment
 six
 seven
 eight nine
 
 Words_change_positions.txt:
+
 nine eight seven six five four three two one 
 
 Char_change_positions.txt:
