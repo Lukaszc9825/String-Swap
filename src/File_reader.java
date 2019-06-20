@@ -10,7 +10,7 @@ public class File_reader {
      private File file_save;
      private Scanner scanner;
      private FileWriter write;
-     private List<String> lanes = new ArrayList<>();
+     private List<String> lines = new ArrayList<>();
 
      // function which Read string from file
      public void read()
@@ -20,13 +20,13 @@ public class File_reader {
              String lane = null;
 
              do {
-                 if (scanner.next().equals("#")) //# ..... allows to comment in file
+                 if (scanner.hasNext ("#") ) //# ..... allows to comment in file
                  {
-                     scanner.nextLine();
-
+                        scanner.next();
+                        scanner.nextLine();
                  }
                  lane = scanner.next(); // add new scanned word to variable lane
-                 lanes.add(lane);  // add lane to list
+                 lines.add(lane);  // add lane to list
                  //System.out.println(lane);
              }while (lane != null);
          }catch(Exception ex)
@@ -47,6 +47,7 @@ public class File_reader {
     public void write(String file_name, String[] array)
      {
          try {
+             write.flush();
              this.file_save = new File(file_name + ".txt");
              this.write = new FileWriter(file_save);
              for (String s:array)
@@ -82,6 +83,6 @@ public class File_reader {
 
     public List<String> getList()
     {
-        return lanes;
+        return lines;
     }
 }
